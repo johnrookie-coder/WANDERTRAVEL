@@ -80,8 +80,18 @@ p {
   line-height: 1.7;
 }
 
+.text-sm {
+  font-size: 2.2rem;
+}
+
 .text-md {
   font-size: 3.2rem;
+}
+
+.bold {
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .center {
@@ -98,6 +108,10 @@ p {
 
 .mt-xxl {
   margin-top: 8rem;
+}
+
+.mb-xs {
+  margin-bottom: 8px;
 }
 
 .mb-sm {
@@ -124,8 +138,8 @@ p {
   display: -ms-grid;
   display: grid;
   height: auto;
-  -ms-grid-rows: [header-start] 100vh [header-end main-start] auto [main-end footer-start] 100px [footer-end];
-      grid-template-rows: [header-start] 100vh [header-end main-start] auto [main-end footer-start] 100px [footer-end];
+  -ms-grid-rows: [header-start] 100vh [header-end main-start] auto [main-end footer-start] auto [footer-end];
+      grid-template-rows: [header-start] 100vh [header-end main-start] auto [main-end footer-start] auto [footer-end];
   grid-gap: 8rem;
 }
 
@@ -360,5 +374,74 @@ p {
 
 .footer {
   background-color: var(--bg-footer);
+  height: 100%;
+  width: 100%;
+}
+
+.footer .container {
+  margin: 6rem auto;
+  height: auto;
+  width: 90%;
+}
+
+.footer__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.footer__grid * {
+  width: 25rem;
+}
+
+.footer__item--1, .footer__item--2 {
+  color: var(--body-copy--light);
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.7;
+  width: 40%;
+}
+
+.footer__logo {
+  background-color: var(--bg-color);
+  color: var(--bg-footer);
+  padding: 0.75rem;
+  width: 320px;
+}
+
+.footer__logo p {
+  font-family: inherit;
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.footer__social-account {
+  width: 50%;
+}
+
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.footer__social__item {
+  display: inline-block;
+}
+
+.footer__social__item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 4.8rem;
+  width: 4.8rem;
 }
 /*# sourceMappingURL=main.css.map */
