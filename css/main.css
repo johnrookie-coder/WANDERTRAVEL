@@ -32,6 +32,8 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  height: 100%;
+  width: 100%;
 }
 
 .hero__primary-heading {
@@ -138,6 +140,7 @@ p {
   display: -ms-grid;
   display: grid;
   height: auto;
+  width: 100%;
   -ms-grid-rows: [header-start] 100vh [header-end main-start] auto [main-end footer-start] auto [footer-end];
       grid-template-rows: [header-start] 100vh [header-end main-start] auto [main-end footer-start] auto [footer-end];
   grid-gap: 8rem;
@@ -225,6 +228,16 @@ p {
   display: -ms-grid;
   display: grid;
   grid-gap: 8rem;
+  height: auto;
+}
+
+.main .get-started,
+.main .image__gallery,
+.main .testimonials {
+  padding: 1rem;
+  margin: 0 auto;
+  height: auto;
+  width: 90%;
 }
 
 .main img {
@@ -238,7 +251,6 @@ p {
       grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2.4rem;
   height: auto;
-  width: 100%;
 }
 
 .main .get-started .grid__row img {
@@ -246,7 +258,7 @@ p {
   -o-object-fit: cover;
      object-fit: cover;
   height: 25rem;
-  width: 38.5rem;
+  width: 100%;
 }
 
 .main .image__gallery__grid {
@@ -407,7 +419,7 @@ p {
   background-color: var(--bg-color);
   color: var(--bg-footer);
   padding: 0.75rem;
-  width: 32rem;
+  width: 33rem !important;
 }
 
 .footer__logo p {
@@ -613,7 +625,7 @@ p {
   }
   .main .get-started .grid__row img {
     height: 27.5rem;
-    width: 100%;
+    width: 50rem;
   }
   .main .get-started .grid__row p {
     text-align: center;
@@ -629,8 +641,8 @@ p {
     grid-gap: 0;
   }
   .main .image__gallery__grid .item {
-    height: 350px;
-    width: inherit;
+    height: 35rem;
+    width: 100%;
     margin-bottom: 3.2rem;
   }
   .main .image__gallery__grid .item--1 {
@@ -681,20 +693,25 @@ p {
     width: 100%;
   }
   .main .testimonials__reviews--1, .main .testimonials__reviews--2, .main .testimonials__reviews--3 {
-    margin-left: 1.6rem;
+    margin-left: 1rem;
+  }
+  .main .testimonials__content {
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
   }
   .main .testimonials__content h3 {
     margin-top: 1.6rem;
     font-size: 2.8rem;
-    width: 75%;
+    width: 95%;
   }
   .main .testimonials__content p {
-    width: 75%;
+    width: 95%;
   }
   .main .testimonials__img {
-    height: 17.5rem;
-    width: 17.5rem;
-    margin: 0 4rem;
+    margin: 0 2rem;
+    height: 15rem;
+    width: 15rem;
   }
   .footer__grid {
     grid-auto-flow: column;
@@ -715,7 +732,7 @@ p {
   .footer__logo {
     margin-bottom: 2.4rem;
     padding: 0.75rem 1.5rem;
-    width: 30rem;
+    width: 30rem !important;
   }
   .footer__logo p {
     font-family: inherit;
@@ -904,7 +921,7 @@ p {
   }
   .main .get-started .grid__row img {
     height: 20rem;
-    width: 30rem;
+    width: 100%;
   }
   .main .image__gallery__grid {
     grid-auto-flow: column;
@@ -996,7 +1013,7 @@ p {
   .footer__logo {
     margin-bottom: 2.4rem;
     padding: 0.5rem 1rem;
-    width: 28rem;
+    width: 28rem !important;
   }
   .footer__logo p {
     font-family: inherit;
