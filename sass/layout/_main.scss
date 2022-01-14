@@ -1,0 +1,88 @@
+.main {
+  position: relative;
+  background-color: var(bg-color);
+  display: grid;
+  grid-gap: 8rem;
+
+  height: auto;
+
+  // Layout
+  .get-started,
+  .image__gallery,
+  .testimonials {
+    padding: 1rem;
+    margin: 0 auto;
+    height: auto;
+    width: 90%;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  img {
+    pointer-events: none;
+  }
+
+  // Testimonials / Reviews
+  .testimonials {
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__shadow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      // For box-shadow in clip-path
+      filter: drop-shadow(0 8px 20px rgba(1, 106, 167, 0.1));
+    }
+
+    &__reviews {
+      display: flex;
+      flex-direction: row;
+
+      background-color: var(--bg-color);
+      clip-path: polygon(7.5% 0, 90% 0, 84% 100%, 0 100%);
+      padding: 5rem;
+      width: 80%;
+
+      &--1 {
+        margin-left: 10rem;
+      }
+
+      &--2 {
+        margin-left: 14rem;
+      }
+
+      &--3 {
+        margin-left: 18rem;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        color: var(--dark-gray);
+      }
+
+      p {
+        color: var(--body-copy);
+      }
+    }
+
+    &__img {
+      border-radius: 100%;
+      object-fit: cover;
+      margin: 0 3.2rem;
+      height: 15rem;
+      width: 15rem;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+// Get Started
+.get-started {
+  .grid__row {
+    display: grid;
+    // repeat(1fr 1fr 1fr) makes error in main.css
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2.4rem;
+    height: auto;
+
+    img {
+      border-radius: 0.8rem;
+      object-fit: cover;
+
+      height: 25rem;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+// Buttons
+.hero {
+  .btn {
+    border: none;
+    border-radius: 3.2rem;
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 2rem;
+    text-align: center;
+
+    height: 6rem;
+    width: 20rem;
+    padding: 1rem 1.6rem;
+
+    &--primary {
+      background-color: var(--primary-cta);
+      box-shadow: 0 8px 16px rgba(230, 68, 38, 0.2);
+      color: var(--body-copy--light);
+    }
+  }
+}
+
+// Back to top
+.toTop {
+  display: none;
+  opacity: 0;
+
+  background-color: #146356;
+  box-shadow: 0 8px 16px rgba(16, 79, 68, 0.4);
+  border-radius: 100%;
+  color: #fbfbfb;
+  cursor: pointer;
+
+  position: fixed;
+  right: 2.75%;
+  bottom: 10%;
+  z-index: 1000;
+
+  font-size: 2rem;
+  text-decoration: none;
+
+  height: 6rem;
+  width: 6rem;
+
+  &.active {
+    display: inline-block;
+    opacity: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}

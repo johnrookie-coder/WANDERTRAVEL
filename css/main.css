@@ -19,6 +19,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -156,6 +157,8 @@ p {
 }
 
 .toTop {
+  display: none;
+  opacity: 0;
   background-color: #146356;
   -webkit-box-shadow: 0 8px 16px rgba(16, 79, 68, 0.4);
           box-shadow: 0 8px 16px rgba(16, 79, 68, 0.4);
@@ -163,25 +166,28 @@ p {
   color: #fbfbfb;
   cursor: pointer;
   position: fixed;
-  right: 5%;
+  right: 2.75%;
   bottom: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  z-index: 1000;
   font-size: 2rem;
   text-decoration: none;
   height: 6rem;
   width: 6rem;
+}
+
+.toTop.active {
+  display: inline-block;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
 .get-started .grid__row {
@@ -314,7 +320,7 @@ p {
 
 .hero {
   position: relative;
-  background: url("/dist/img/hero-banner.jpg") no-repeat center center/cover;
+  background: url("../img/hero-banner.jpg") no-repeat center center/cover;
   height: 100%;
   width: 100%;
   z-index: 20;
@@ -656,6 +662,9 @@ p {
 }
 
 @media (max-width: 992px) {
+  .header {
+    height: 100vh;
+  }
   .hero__logo {
     font-size: 2.4rem;
     text-align: left;
@@ -681,6 +690,9 @@ p {
   }
   .grid {
     grid-gap: 4rem;
+  }
+  .toTop {
+    right: 3%;
   }
   .main .heading__secondary {
     font-size: 3.2rem;
@@ -836,6 +848,12 @@ p {
 }
 
 @media (max-width: 768px) {
+  .toTop {
+    right: 2%;
+    bottom: 5%;
+    height: 5.5rem;
+    width: 5.5rem;
+  }
   .main .get-started .grid__row {
     grid-auto-flow: column;
     -ms-grid-columns: none;
@@ -983,6 +1001,12 @@ p {
   }
   .grid {
     grid-gap: 4rem;
+  }
+  .toTop {
+    right: 2%;
+    bottom: 2%;
+    height: 5rem;
+    width: 5rem;
   }
   .main .heading__secondary {
     font-size: 3rem;

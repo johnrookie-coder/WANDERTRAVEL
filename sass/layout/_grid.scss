@@ -1,0 +1,26 @@
+.grid {
+  display: grid;
+  height: auto;
+  width: 100%;
+
+  // TRACKS
+  grid-template-rows: [header-start] 100vh [header-end main-start] auto [main-end footer-start] auto[footer-end];
+
+  // GAP
+  grid-gap: 8rem;
+}
+
+.header {
+  grid-row: header-start/ header-end;
+}
+
+.main {
+  grid-row: main-start / main-end;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.footer {
+  background-color: var(--bg-footer);
+  grid-row: footer-start/ footer-end;
+}
