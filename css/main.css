@@ -331,7 +331,7 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(0, 0, 0, 0.65);
   height: 100%;
   width: 100%;
   z-index: -1;
@@ -679,10 +679,10 @@ p {
     width: 100%;
   }
   .hero__primary-heading {
-    font-size: 6.4rem;
+    font-size: 8.8rem;
   }
   .hero__secondary-heading {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     margin-left: 0.8rem;
   }
   .hero .btn {
@@ -849,8 +849,8 @@ p {
 
 @media (max-width: 768px) {
   .toTop {
-    right: 2%;
-    bottom: 5%;
+    right: 5%;
+    bottom: 8%;
     height: 5.5rem;
     width: 5.5rem;
   }
@@ -973,9 +973,9 @@ p {
 
 @media (max-width: 500px) {
   .hero__logo {
-    font-size: 1.8rem;
-    padding: 1rem;
-    width: 17rem;
+    font-size: 2.2rem;
+    padding: 1.25rem;
+    width: 21rem;
   }
   .hero__content {
     top: 20%;
@@ -986,11 +986,11 @@ p {
     padding-left: 3.2rem;
   }
   .hero__primary-heading {
-    font-size: 3.8rem;
+    font-size: 4.6rem;
     margin-bottom: 8px;
   }
   .hero__secondary-heading {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-left: 0;
   }
   .hero .btn {
@@ -1003,8 +1003,8 @@ p {
     grid-gap: 4rem;
   }
   .toTop {
-    right: 2%;
-    bottom: 2%;
+    right: 6%;
+    bottom: 8%;
     height: 5rem;
     width: 5rem;
   }
