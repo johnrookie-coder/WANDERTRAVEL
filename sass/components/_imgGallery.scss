@@ -4,20 +4,21 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    // grid-gap: 0.8rem;
     grid-gap: 1.6rem;
 
     .item {
       position: relative;
+      overflow: hidden;
+
       height: 350px;
       width: 100%;
-      transform: scale(1);
-      transition: all 0.4s ease-in-out;
       z-index: 100;
 
-      &:hover {
+      &:hover img,
+      &:focus img {
         cursor: pointer;
-        transform: scale(1.05);
+        transform: scale(1.2);
+        transition: transform 0.4s ease-in-out;
         z-index: 500;
 
         &::before {

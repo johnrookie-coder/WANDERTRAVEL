@@ -219,23 +219,26 @@ p {
 
 .image__gallery__grid .item {
   position: relative;
+  overflow: hidden;
   height: 350px;
   width: 100%;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
   z-index: 100;
 }
 
-.image__gallery__grid .item:hover {
+.image__gallery__grid .item:hover img,
+.image__gallery__grid .item:focus img {
   cursor: pointer;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
   z-index: 500;
 }
 
-.image__gallery__grid .item:hover::before {
+.image__gallery__grid .item:hover img::before,
+.image__gallery__grid .item:focus img::before {
   background-color: rgba(76, 0, 39, 0.2);
 }
 
