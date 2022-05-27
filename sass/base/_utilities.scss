@@ -5,7 +5,8 @@
     // border: 3px solid #fff;
     color: currentColor;
     font-family: "Gelasio", serif;
-    font-size: 11rem;
+    font-size: clamp(5rem, 10vw, 11rem);
+    // font-size: 11rem;
     letter-spacing: 2px;
     text-transform: uppercase;
   }
@@ -15,33 +16,36 @@
     color: currentColor;
     font-family: "Inter", sans-serif;
     font-weight: 400;
-    font-size: 3.2rem;
+    font-size: clamp(2rem, 3vw, 3.2rem);
     letter-spacing: 2px;
     text-transform: uppercase;
 
-    margin-left: 8px;
+    // margin-left: 8px;
   }
 }
 
 // Headings
-.heading__secondary {
-  color: var (--body-copy--dark);
-  font-family: inherit;
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.3;
-  text-align: center;
-  text-transform: uppercase;
-}
+.heading {
+  &--secondary {
+    color: var (--body-copy--dark);
+    font-family: inherit;
+    font-size: clamp(2.4rem, 3vw, 4rem);
+    // font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    text-transform: uppercase;
+  }
 
-.heading__tertiary {
-  color: rgb(70, 70, 70);
-  font-family: inherit;
-  font-size: 2.4rem;
-  font-weight: 700;
-  line-height: 1.2;
-  text-align: center;
-  text-transform: uppercase;
+  &--tertiary {
+    color: rgb(70, 70, 70);
+    font-family: inherit;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
 
 // Overall paragraph style
@@ -54,13 +58,14 @@ p {
 }
 
 // Text
+.text {
+  &--sm {
+    font-size: 2.2rem;
+  }
 
-.text-sm {
-  font-size: 2.2rem;
-}
-
-.text-md {
-  font-size: 3.2rem;
+  &--md {
+    font-size: 3.2rem;
+  }
 }
 
 .bold {
@@ -85,31 +90,57 @@ p {
 
 // Margins
 // M-TOP
-.mt-xxl {
-  margin-top: 8rem;
+.mt {
+  &--xxl {
+    margin-top: 8rem;
+  }
+
+  &--sm {
+    margin-top: 1.6rem;
+  }
 }
 
 // M-BOTTOM
-.mb-xs {
-  margin-bottom: 8px;
+.mb {
+  &--xs {
+    margin-bottom: 8px;
+  }
+
+  &--sm {
+    margin-bottom: 1.6rem;
+  }
+
+  &--md {
+    margin-bottom: 2.4rem;
+  }
+
+  &--lg {
+    margin-bottom: 3.2rem;
+  }
+
+  &--xl {
+    margin-bottom: 4.8rem;
+  }
+
+  &--xxl {
+    margin-bottom: 8rem;
+  }
 }
 
-.mb-sm {
-  margin-bottom: 1.6rem;
-}
+.hero__logo {
+  background-color: var(--bg-color);
+  color: var(--bg-footer);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3rem);
+  overflow: hidden;
+  text-align: center;
 
-.mb-md {
-  margin-bottom: 2.4rem;
-}
+  display: inline-block;
+  padding: 0.85rem 1rem;
 
-.mb-lg {
-  margin-bottom: 3.2rem;
-}
-
-.mb-xl {
-  margin-bottom: 4.8rem;
-}
-
-.mb-xxl {
-  margin-bottom: 8rem;
+  & > p {
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
 }

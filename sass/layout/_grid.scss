@@ -24,3 +24,8 @@
   background-color: var(--bg-footer);
   grid-row: footer-start/ footer-end;
 }
+
+.grid__row {
+  width: 100%;
+  overflow: hidden;
+}
